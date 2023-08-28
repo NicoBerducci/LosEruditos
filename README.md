@@ -1,5 +1,6 @@
 # LosEruditos
-Grupo de desarrollo de software de tercer año de ingeniería en sistemas de información de la UTN Regional Mendoza.
+Grupo de desarrollo de software de tercer año (comisión 3K9) de Ingeniería en Sistemas de Información de la UTN Regional Mendoza.
+
 Estamos encargados de realizar un sistema para el delivery de comidas de la ciudad “El Buen Sabor”.
 
 Integrantes del grupo (Legajo)
