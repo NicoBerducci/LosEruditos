@@ -1,20 +1,23 @@
-# LosEruditos
-Grupo de desarrollo de software de tercer año (comisión 3K9) de Ingeniería en Sistemas de Información de la UTN Regional Mendoza.
+# El Buen Sabor
+![image](https://github.com/NicoBerducci/LosEruditos/assets/142543849/5417d66b-6c7a-445d-9861-de415be4fbd8)
+# Temática del sitio
+El delivery de comidas de la ciudad “El Buen Sabor” ofrece a sus clientes una amplia variedad de bebidas y de comidas de fabricación propia. Posee un horario de atención de lunes a domingos de 20:00 a 12:00, y de sábados y domingos de 11:00 a 15:00. Los clientes tienen a disposición un menú que describe cada una de las comidas, el nombre, los ingredientes y el precio. Los clientes realizan sus pedidos en el mostrador del local mediante una PC o pueden hacerlo en forma remota desde su casa o su celular personal.
 
-Estamos encargados de realizar un sistema para el delivery de comidas de la ciudad “El Buen Sabor”.
+# Público objetivo
+El Buen Sabor está abierto para todo público.
 
-Integrantes del grupo (Legajo)
+# Integrantes del grupo
 
-Berducci Sebastián Nicolás (48924)
+Berducci Sebastián Nicolás 
 
-Bufarini Ignacio (48963)
+Bufarini Ignacio
 
-Calcagno Matías (48862)
+Calcagno Matías 
 
-Carcano Martín (46167)
+Carcano Martín 
 
-Genaulaz Martín (48898)
+Genaulaz Martín 
 
-González Agustín (49019)
+González Agustín
 
-Martinez Valentín (47848)
+Martinez Valentín 
