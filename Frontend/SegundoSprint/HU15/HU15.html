@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HU15- Administracion  de estado, cobro y entrega de pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="HU14-15-16.css">
+  </head>
+  <body>
+    <nav>
+      <img src="./Logo.png" alt="" style="height: 100px;">
+      <div id="navdiv">
+          <button style="display: block;">Home</button>
+          <button style="display: none;">Productos</button>
+          <div id="divbuscador">
+              <input id="inputbuscar" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 24" fill="none">
+                      <g clip-path="url(#clip0_855_41)">
+                          <path
+                              d="M15.8594 14H15.0694L14.7894 13.73C15.7694 12.59 16.3594 11.11 16.3594 9.5C16.3594 5.91 13.4494 3 9.85938 3C6.26938 3 3.35938 5.91 3.35938 9.5C3.35938 13.09 6.26938 16 9.85938 16C11.4694 16 12.9494 15.41 14.0894 14.43L14.3594 14.71V15.5L19.3594 20.49L20.8494 19L15.8594 14ZM9.85938 14C7.36938 14 5.35938 11.99 5.35938 9.5C5.35938 7.01 7.36938 5 9.85938 5C12.3494 5 14.3594 7.01 14.3594 9.5C14.3594 11.99 12.3494 14 9.85938 14Z"
+                              fill="black" fill-opacity="0.75" />
+                      </g>
+                      <defs>
+                          <clipPath id="clip0_855_41">
+                              <rect width="24" height="24" fill="white" transform="translate(0.359375)" />
+                          </clipPath>
+                      </defs>
+                  </svg>
+              </button>
+          </div>
+          <button style="display: block;" id="IniciarSesion">Cajero</button>
+          <button style="display: none;">Registrarte</button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
+              style="display: none;">
+              <path
+                  d="M34.907 26.4C36.7064 26.4 38.2898 25.416 39.1055 23.928L47.6943 8.352C48.582 6.768 47.4304 4.8 45.6071 4.8H10.1002L7.84509 0H0V4.8H4.79822L13.435 23.016L10.1962 28.872C8.44486 32.088 10.748 36 14.3947 36H43.184V31.2H14.3947L17.0337 26.4H34.907ZM12.3794 9.6H41.5286L34.907 21.6H18.0653L12.3794 9.6ZM14.3947 38.4C11.7556 38.4 9.62043 40.56 9.62043 43.2C9.62043 45.84 11.7556 48 14.3947 48C17.0337 48 19.1929 45.84 19.1929 43.2C19.1929 40.56 17.0337 38.4 14.3947 38.4ZM38.3857 38.4C35.7467 38.4 33.6115 40.56 33.6115 43.2C33.6115 45.84 35.7467 48 38.3857 48C41.0248 48 43.184 45.84 43.184 43.2C43.184 40.56 41.0248 38.4 38.3857 38.4Z"
+                  fill="#FFD23F" />
+          </svg>
+      </div>
+  </nav>
+  <div id="body2">
+    <div>
+        <text style="-webkit-text-fill-color: #FFFFFF;">Búsqueda por ID</text>
+          <button style="background: transparent url(<path-to-image>) no-repeat; background-size: contain;">
+            <input id="inputBuscar" type="search" style="border-radius: 8px; border-color: #FFFFFF; -webkit-text-fill-color: #FFFFFF;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.63) 0%, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.57) 100%);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 24">
+                <g clip-path="url(#clip0_855_41)">
+                    <path
+                        d="M15.8594 14H15.0694L14.7894 13.73C15.7694 12.59 16.3594 11.11 16.3594 9.5C16.3594 5.91 13.4494 3 9.85938 3C6.26938 3 3.35938 5.91 3.35938 9.5C3.35938 13.09 6.26938 16 9.85938 16C11.4694 16 12.9494 15.41 14.0894 14.43L14.3594 14.71V15.5L19.3594 20.49L20.8494 19L15.8594 14ZM9.85938 14C7.36938 14 5.35938 11.99 5.35938 9.5C5.35938 7.01 7.36938 5 9.85938 5C12.3494 5 14.3594 7.01 14.3594 9.5C14.3594 11.99 12.3494 14 9.85938 14Z"
+                        fill="#FFD23F"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_855_41">
+                        <rect width="24" height="24" transform="translate(0.359375)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </button>
+    </div>
+    
+    <div>
+        <text style="-webkit-text-fill-color: #FFFFFF;">Filtrar por estado</text>
+        <div class="custom-button">
+          <button class="toggle-button" id="toggle-button">
+            Estados
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <g clip-path="url(#clip0_908_1027)">
+                <path d="M14.82 17.1797L24 26.3397L33.18 17.1797L36 19.9997L24 31.9997L12 19.9997L14.82 17.1797Z" fill="black"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_908_1027">
+                  <rect width="48" height="48" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <div class="state-dropdown" style="background-color: #FFFFFF;">
+            <div>A Confirmar</div>
+            <div>En Cocina</div>
+            <div>Listo</div>
+            <div>En Delivery</div>
+            <div>Entregado</div>
+          </div>
+        </div>
+    
+    </div>
+    <div>
+      <button style="display: block;" id="Volver">Volver</button>
+    </div>
+</div>
+
+
+    <table id="Tabla" class="table">
+      <thead>
+        <tr style="background-color: #FFFFFF;">
+          <th scope="col">N°Pedido</th>
+          <th scope="col">Fecha/Hora</th>
+          <th scope="col">Forma Entrega</th>
+          <th scope="col">Forma de Pago</th>
+          <th scope="col">Pagado</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Detalle</th>
+          <th scope="col" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;"></th>
+          <th scope="col" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;">Acciones</th>
+          <th scope="col" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;"></th>
+          <th scope="col" style="border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Efectivo</td>
+          <td>SI</td>
+          <td>Listo</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">Delivery</button></td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Efectivo</td>
+          <td>SI</td>
+          <td>A Confirmar</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">A Cocina</button></td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Entrega en Local</td>
+          <td>Efectivo</td>
+          <td>SI</td>
+          <td>Entregado</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td> </td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Mercado Pago</td>
+          <td>SI</td>
+          <td>En Cocina</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td> </td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Mercado Pago</td>
+          <td>NO</td>
+          <td>A Confirmar</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">A Cocina</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #12A432; border-color: #000000;">Pagar</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #7B7676; border-color: #000000; -webkit-text-fill-color: #CEC9C9;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Mercado Pago</td>
+          <td>NO</td>
+          <td>A Confirmar</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">A Cocina</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #12A432; border-color: #000000;">Pagar</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #7B7676; border-color: #000000; -webkit-text-fill-color: #CEC9C9;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Mercado Pago</td>
+          <td>NO</td>
+          <td>En delivery</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Efectivo</td>
+          <td>SI</td>
+          <td>Listo</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">Delivery</button></td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Delivery</td>
+          <td>Efectivo</td>
+          <td>SI</td>
+          <td>Entregado</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td> </td>
+          <td> </td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+        <tr style="background-color: #FFFFFF;">
+          <td>123456</td>
+          <td>23/8/23 15:30</td>
+          <td>Entrega en Local</td>
+          <td>Mercado Pago</td>
+          <td>NO</td>
+          <td>A Confirmar</td>
+          <td><button type="button" class="btn btn" style="background-color: #1CB9DC; border-color: #000000;">Ver Detalle</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #E17E22; border-color: #000000; -webkit-text-fill-color: #FFFFFF;">A Cocina</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #12A432; border-color: #000000;">Pagar</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #7B7676; border-color: #000000; -webkit-text-fill-color: #CEC9C9;">Ver Factura</button></td>
+          <td><button type="button" class="btn btn" style="background-color: #FFFFFF;"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
+            <path d="M12.2725 0.375L10.2725 2.375H0.272461V6.375H32.2725V2.375H22.2725L20.2725 0.375H12.2725ZM2.27246 10.375V36.375C2.27246 38.575 4.07246 40.375 6.27246 40.375H26.2725C28.4725 40.375 30.2725 38.575 30.2725 36.375V10.375H2.27246ZM8.27246 14.375H12.2725V36.375H8.27246V14.375ZM20.2725 14.375H24.2725V36.375H20.2725V14.375Z" fill="#BB2828"/>
+          </svg>
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg></button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
