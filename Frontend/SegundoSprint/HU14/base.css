@@ -5,9 +5,11 @@ body {
     align-items: center;
     gap: 2px;
     background-color: #232222;
+    font-family: Inter;
 }
 
 nav {
+    font-family: Inter;
     display: flex;
     align-self: stretch;
     align-items: center;
@@ -16,6 +18,7 @@ nav {
 }
 
 #navdiv {
+    font-family: Inter;
     display: flex;
     align-items: center;
     padding: 16.2px 54px 16.2px 16.2px;
@@ -24,6 +27,7 @@ nav {
 }
 
 #navdiv button:not(#IniciarSesion) {
+    font-family: Inter;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -42,6 +46,7 @@ nav {
     align-items: center;
     border-radius: 100px;
     background: #FFD23F;
+    font-family: Inter;
 }
 
 #inputbuscar {
@@ -51,6 +56,7 @@ nav {
     align-items: center;
     border-radius: 100px;
     border: none;
+    font-family: Inter;
 }
 
 #botonbuscar {
@@ -62,6 +68,7 @@ nav {
     gap: 8px;
     font-size: 20px;
     color: white;
+    font-family: Inter;
 }
 
 #divbuscador {
@@ -69,4 +76,5 @@ nav {
     align-items: center;
     border-radius: 100px;
     background: white;
+    font-family: Inter;
 }
