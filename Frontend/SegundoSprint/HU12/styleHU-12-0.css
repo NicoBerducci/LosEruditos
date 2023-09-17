@@ -1,0 +1,194 @@
+/*Generales*/
+body {
+  background-color: #232222;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  background-color: #ffd23f;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000000;
+  border-radius: 16px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgba(255, 210, 63, 0.7);
+}
+
+/*-----------------*/
+/*Pantalla completa*/
+/*-----------------*/
+.pantalla-completa {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: fit-content;
+  padding: 10px 0px 20px 0px;
+  /*padding: 10px 80px 30px 80px;*/ /*arriba, derecha, abajo, izquierda*/
+}
+
+/*-----------------*/
+/*--TITULO PAGINA--*/
+/*-----------------*/
+.form-titulo {
+  border-bottom: 1px solid #ffffff;
+  width: fit-content;
+}
+h2 {
+  margin: 10px;
+}
+
+/*--------------------------------*/
+/*-----------FORMULARIO-----------*/
+/*--------------------------------*/
+.pantalla {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+.pantalla-form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: fit-content;
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-width: 500px;
+  width: max-content;
+}
+.escrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 6px;
+  width: 100%;
+}
+.escrito h3,
+p,
+a {
+  margin: 0;
+}
+a {
+  color: #ffd23f;
+}
+.radio {
+  margin: 0;
+  min-height: 32px;
+  min-width: 32px;
+  background-color: rgb(119, 119, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+#domicilio{
+    height: 20px;
+    width: 20px;
+    background-color: #ffd23f;
+    border-radius: 100%;
+}
+/*----------------------------------*/
+/*CONTENEDOR DE RESUMEN DE LA COMPRA*/
+/*----------------------------------*/
+#contenedorCarrito {
+  display: inline-flex;
+  padding: 10px 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #111111;
+  border-radius: 8%;
+  width: 225px;
+  height: 250px;
+  min-width: 225px;
+}
+.resumenCompra {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0px;
+}
+.resumenCompraTitulo {
+  border-bottom: 3px solid #000000;
+  margin: 0px;
+}
+.resumenCompraTitulo h3 {
+  margin: 7px;
+}
+.objetoResumenCompra {
+  display: flex;
+  justify-content: space-between;
+}
+.objetoResumenCompra h3 {
+  margin: 7px;
+}
+.objetoResumenCompra h5 {
+  margin: 10px;
+}
+#contenedorCarrito button {
+  font-size: large;
+}
+#contenedorCarrito a{
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Bton volver*/
+#volver {
+  font-size: small;
+  max-width: 70px;
+}
+#volver a {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+@media (max-width: 1080px) {
+  .pantalla {
+    gap: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-footer {
+    width: 250px;
+  }
+  .footer-img {
+    display: none;
+  }
+  .footer-titulo h5 {
+    display: flex;
+    justify-content: center;
+  }
+  .item {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+@media (max-width: 720px) {
+  .pantalla {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

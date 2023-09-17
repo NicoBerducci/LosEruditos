@@ -1,0 +1,279 @@
+/*Generales*/
+body {
+    background-color: #232222;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+button {
+    background-color: #ffd23f;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(255, 210, 63, 0.7);
+}
+
+/*-----------------*/
+/*Pantalla completa*/
+/*-----------------*/
+.detallePedido {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+.tituloDetalle h2 {
+    margin: 10px;
+}
+
+.tituloDetalle {
+    border-bottom: 1px solid #ffffff;
+    width: fit-content;
+}
+
+.detalle {
+    display: flex;
+    gap: 30px;
+}
+
+.pantalla {
+    padding-top: 20px;
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: space-around;
+}
+
+.objetosCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 700px;
+    gap: 15px;
+}
+
+/*--------------------------------*/
+/*CONTENEDOR DEL CARRITO DE COMPRA*/
+/*--------------------------------*/
+.objetoCarrito {
+    display: flex;
+}
+
+.indispensables {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Foto*/
+.foto {
+    display: flex;
+    align-items: center;
+}
+
+.foto img {
+    height: 125px;
+    width: 125px;
+}
+
+/*TODO LOS TEXTOS*/
+.escrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titulo h3 {
+    margin: 7px;
+}
+
+.escrito p {
+    margin: 7px;
+}
+
+/*CONTADOR*/
+.contador {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.sumador {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30%;
+    width: 60px;
+    border: 2px solid black;
+    border-radius: 30%;
+}
+
+.parte {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    border-radius: 40%;
+}
+
+.parte h3 {
+    margin: 7px;
+}
+
+#numero {
+    background-color: #232222;
+    border-radius: 0%;
+}
+
+/*Precio sumado*/
+.precioSumado {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 100px;
+    max-width: 120px;
+}
+
+/*Bton volver*/
+#volver {
+    font-size: small;
+    max-width: 170px;
+}
+
+#volver a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/*----------------------------------*/
+/*CONTENEDOR DE RESUMEN DE LA COMPRA*/
+/*----------------------------------*/
+#contenedorCarrito {
+    display: inline-flex;
+    padding: 10px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #111111;
+    border-radius: 8%;
+    width: 225px;
+    height: 280px;
+    min-width: 225px;
+}
+
+.resumenCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+}
+
+.resumenCompraTitulo {
+    border-bottom: 3px solid #000000;
+    margin: 0px;
+}
+
+.resumenCompraTitulo h3 {
+    margin: 7px;
+}
+
+.objetoResumenCompra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.objetoResumenCompra h3 {
+    margin: 7px;
+}
+
+.objetoResumenCompra h5 {
+    margin: 10px;
+}
+
+#contenedorCarrito button {
+    font-size: large;
+}
+
+#contenedorCarrito a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#horaEstimada {
+    color: white;
+    background-color: rgb(77, 77, 77);
+}
+
+@media (max-width: 1080px) {
+    .pantalla {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #seguir-comprando {
+        display: none;
+    }
+
+    .objetosCarrito {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pantalla {
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .objetosCarrito {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detallePedido {
+        padding: 0px;
+        align-items: center;
+    }
+
+    .escrito {
+        max-width: 300px;
+    }
+
+    .objetoCarrito {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        max-width: 300px;
+        border-radius: 16%;
+        background-color: rgba(17, 17, 17, 0.4);
+    }
+
+    .indispensables {
+        flex-direction: row;
+    }
+
+    .btn-volver {
+        display: none;
+    }
+}
