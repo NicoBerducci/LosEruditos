@@ -81,6 +81,7 @@ nav {
 @media (max-width: 900px){
     #navdiv{
         display: none;
+        width:100%;
     }
     .menu {
         display: block;
