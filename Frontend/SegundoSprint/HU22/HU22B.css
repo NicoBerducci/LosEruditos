@@ -1,0 +1,327 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    display: flex;
+    padding: 0px 13px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    background-color: #232222;
+}
+
+nav {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    gap: 47px;
+    border-bottom: 2px solid #FFD23F;
+}
+
+#navdiv {
+    display: flex;
+    align-items: center;
+    padding: 16.2px 54px 16.2px 16.2px;
+    justify-content: space-between;
+    flex: 1 0 0;
+}
+
+#navdiv button:not(#IniciarSesion) {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+#IniciarSesion {
+    display: flex;
+    min-width: 150px;
+    padding: 8.16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    background: #FFD23F;
+}
+
+#inputbuscar {
+    display: flex;
+    padding: 8.16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    border: none;
+}
+
+#botonbuscar {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+#divbuscador {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    background: white;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 900px){
+    #navdiv{
+        display: none;
+    }
+    .menu {
+        display: block;
+        padding-right: 50px;
+    }
+    .menu svg{
+        border: 3px solid #000000;
+        border-radius: 8%;
+        width: fit-content;
+        padding: 5px 5px 5px 5px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+.contenedor {
+    width: 80%;
+    /* Permite que los elementos se envuelvan en la siguiente línea */
+    background-color: #433F3F;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    display: inline-block; /* Cambiamos a inline-block */
+    vertical-align: top; /* Alineamos arriba verticalmente */
+}
+.prod {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    display: inline-block; /* Agregamos display: inline-block para que el formulario esté en línea */
+}
+
+.texto {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 50px;
+}
+
+
+.texto1 {
+    margin-top: 0px;
+    margin: 30px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+#Rubro {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 510px; /* Establece el ancho máximo según tus necesidades */
+    display: block;
+    background-color: #433F3F;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+#Rubro::placeholder {
+    color: white;
+}
+#Estado{
+    width: 100%;
+    min-width: auto;
+    background-color: #433F3F;
+    color: white;
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.image {
+    /* width: 50%; Eliminamos esta propiedad para que ocupe el espacio restante */
+    text-align: center;
+    border: 1px solid white;
+    padding: 70px;
+    display: inline-block; /* Agregamos display: inline-block para que la imagen esté en línea */
+    width: 30%;
+    display: inline-block; /* Cambiamos a inline-block */
+    vertical-align: top; /* Alineamos arriba verticalmente */
+    margin-top: 127px;
+    margin-bottom: 127px;
+}
+
+#ingrediente{
+    background-color: white;
+    border-color: black;
+    padding: 10px;
+}
+.total{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.selec{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.seleccion{
+    width: 50%;
+}
+.rubro-producto{
+    font-size: 16px;
+}
+.ingrese{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    background-color: #433F3F;
+    border-color: white;
+    color: white;
+    padding: 5px;
+}
+#ingrese::placeholder {
+    color: white;
+    font-size: 16px;
+}
+
+.opciones{
+    font-size: 16px;
+}
+
+#custom-select{
+    margin-top: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 100%;
+    max-width: max-content;
+    background-color: white;
+}
+.Seleccionar{
+    border: 1px solid white;
+    text-align: center;
+    background-color: #433F3F;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+}
+.custom-option{
+    border: 1px solid white;
+    text-align: left;
+    color: white;
+}
+
+.confirmacion{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos a la izquierda y derecha */
+    align-items: flex-start;
+    padding: 5px;
+}
+.Receta{
+    width: 100%;
+    text-align: center; /* Centra horizontalmente el contenido del div */
+    display: flex; /* Utiliza flexbox para centrar verticalmente */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+.parra{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.tabla{
+    width: 100%;
+}
+.tr1{
+    background-color: white;
+    font-size: 16px;
+}
+.tr2{
+    background-color: #ECECEC;
+    font-size: 16px;
+}
+.td1{
+    padding: 5px;
+}
+.final{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    justify-content:center; /* Coloca los elementos a la izquierda y derecha */
+
+}
+.botonfinal1{
+    width: 100%;
+    max-width: 200px; /* Establece el ancho máximo según tus necesidades */
+    display: block;
+    padding: 8.16px;
+    color: black;
+    border-radius: 10px;
+    background: #FFD23F;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.botonfinal2{
+    width: 100%;
+    max-width: 200px; /* Establece el ancho máximo según tus necesidades */
+    display: block;
+    padding: 8.16px;
+    color: white;
+    border-radius: 10px;
+    background: #BB2828;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+/* Estilos para pantallas medianas y pequeñas */
+@media screen and (max-width: 768px) {
+    .total {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+    }
+    .selec {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        justify-content: center; /* Centra horizontalmente los elementos */
+        margin-top: 20px; /* Añade espacio entre los elementos */
+        display: flex;
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        align-items: center; /* Centra horizontalmente los elementos */
+        margin-top: 20px; /* Añade espacio entre los elementos */
+    }
+    .ingrese {
+        margin-bottom: 10px; /* Agrega margen inferior a los elementos de entrada */
+    }
+}
