@@ -195,6 +195,7 @@ td, th {
     /* Oculta los enlaces de navegación y muestra el botón de menú */
     #navdiv {
         display: none;
+        width:100%;
     }
 
     .menu {
