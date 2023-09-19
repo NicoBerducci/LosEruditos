@@ -1,0 +1,130 @@
+/*Generales*/
+*{
+    font-family: "Inter", sans-serif;
+}
+body {
+    background-color: #232222;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+button {
+    background-color: #ffd23f;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+button:hover {
+    background-color: rgba(255, 210, 63, 0.7);
+}
+
+h2 {
+    font-size: 33px;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+
+/*--------------*/
+/*---PANTALLA---*/
+/*--------------*/
+.pantallaCompleta {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px 10px 50px;
+    gap: 20px;
+}
+
+/*Titulo*/
+.titulo {
+    border-bottom: 1px solid #ffffff;
+    width: fit-content;
+}
+
+.titulo h2 {
+    margin: 10px;
+}
+
+/*TABLA*/
+#tabla {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid #5B5B5B;
+    background: #363636;
+    color: #000000;
+    width: 100%;
+}
+
+table tr th {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    min-height: 60px;
+    font-size: 33px;
+    font-family: "Inter", sans-serif;
+    border-top: 1px solid #5B5B5B;
+    border-left: 1px solid #5B5B5B;
+    background: #FFF;
+}
+
+table td {
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    min-height: 36px;
+    text-align: center;
+    height: max-content;
+    font-size: 28px;
+    border-top: 1px solid #5B5B5B;
+    border-left: 1px solid #5B5B5B;
+    background: #ECECEC;
+}
+
+/*BOTONES*/
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+@media (max-width: 920px) {
+    .total {
+        display: none;
+        background-color: #232222;
+        border-top: none;
+        border-left: none;
+    }
+}
+ 
+@media (max-width: 800px) {
+    .pantallaCompleta{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    table td{
+        font-size: 23px;
+    }
+}
