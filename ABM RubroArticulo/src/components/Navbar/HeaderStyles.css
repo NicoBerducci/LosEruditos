@@ -1,0 +1,99 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+}
+
+nav {
+    background-color: #232222;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    gap: 47px;
+    border-bottom: 2px solid #FFD23F;
+}
+
+#navdiv {
+    display: flex;
+    align-items: center;
+    padding: 16.2px 54px 16.2px 16.2px;
+    justify-content: space-between;
+    flex: 1 0 0;
+}
+
+#navdiv button:not(#IniciarSesion) {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+#IniciarSesion {
+    display: flex;
+    min-width: 150px;
+    padding: 8.16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    background: #FFD23F;
+}
+
+#inputbuscar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    border: none;
+}
+
+#botonbuscar {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+#divbuscador {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    background: white;
+    padding: 0px 2px 0px 10px;
+}
+
+.menu {
+    display: none;
+    background-color: #232222;
+}
+
+@media (max-width: 900px){
+    #navdiv{
+        display: none;
+    }
+    .menu {
+        display: block;
+        padding-right: 50px;
+    }
+    .menu svg{
+        border: 3px solid #000000;
+        border-radius: 8%;
+        width: fit-content;
+        padding: 5px 5px 5px 5px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
